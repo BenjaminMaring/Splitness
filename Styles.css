@@ -8,23 +8,36 @@
     width: 100%;
 }
 
+.font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.color-white {
+    color: white;
+}
+
+.dark {
+    color: #1f1e1e;
+}
+
+.border {
+    border: solid 1px black;
+    border-radius: 5px;
+}
 .header {
     height: 60px;
     background-color: #a8db43;
-    position: sticky;
+    position: fixed;
     top: 0px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 .menu-items {
     display: flex;
     list-style: none;
-}
-
-.font {
-    font-family: 'Roboto', sans-serif;
 }
 
 .menu-text {
@@ -33,7 +46,7 @@
 }
 
 .hero {
-    height: calc(100vh - 60px);
+    height: 100vh;
     width: 100%;
     background-image: url(pictures/splitness-hero.jpg);
     background-size: cover;
@@ -73,12 +86,145 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    transition: width ease-out 300ms;
+    transition: width ease-out 400ms;
     z-index: -1;
 }
 
 
 .hero-button:hover::after {
     width: 230px;
+    transition: width ease-out 400ms;
+}
+
+.rope-bg {
+    background: 
+        linear-gradient(#74972e9a, #74972e9a), 
+        url(pictures/battle-rope.jpg);
+}
+
+.section {
+    height: 700px;
+    width: 100%;
+    background-position: 20%;
+    display: flex;
+}
+
+.section-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 80px;
+    max-width: 80%;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+
+.section-subtext {
+    font-size: 30px;
+}
+
+.section-text-wrapper {
+    width: 60%;
+    z-index: 2;
+}
+
+.second-button {
+    height: 60px;
+    width: 100px;
+    background: transparent;
+    border: solid 2px white;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    position: relative;
+}
+
+.second-button::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 55px;
+    background-color: black;
+    z-index: -1;
     transition: width ease-out 300ms;
+}
+
+.second-button:hover::after {
+    width: 100px;
+    transition: width ease-out 300ms;
+}
+
+.section-3 {
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+
+.section-4 {
+    background-color: #f4f4f4;
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-4-text-wrap {
+    max-width: 30%;
+    height: 80%;
+    z-index: 1;
+}
+
+.section-4 > img {
+    width: 300px;
+    height: 400px;
+    box-shadow: 7px 7px 10px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 7px 10px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 10px 3px rgba(0,0,0,0.75);
+}
+
+.s-4-title {
+   font-size: 80px; 
+}
+
+.s-4-subtext {
+    font-size: 30px;
+}
+
+.create-button {
+    height: 60px;
+    width: 100px;
+    margin-top: 10px;
+    background-color: transparent;
+    font-size:24px;
+    font-weight: 500;
+    border: solid 2px black;
+    position: relative;
+}
+
+.create-button::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: #a8db43;
+    transition: width ease-out 400ms;
+    z-index: -1;
+}
+
+.create-button:hover::after {
+    width: 100%;
+    transition: width ease-out 400ms;
 }
